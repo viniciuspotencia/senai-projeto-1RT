@@ -60,6 +60,8 @@ void ledDistancia() {
   if (distanciaCM < 10) {             // se a distancia for menor que 10 cm
     digitalWrite(ledVermelho, HIGH);  // liga LED vermelho
     tone(pinoBuzzer,1500);//ACIONA O BUZZER
+    delay(800);
+    noTone(pinoBuzzer);//BUZZER PERMANECE DESLIGADO
   }else{//SENÃO, FAZ
     noTone(pinoBuzzer);//BUZZER PERMANECE DESLIGADO
   }
