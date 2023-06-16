@@ -31,12 +31,11 @@ void loop(){
   lcd.print(temperatura); // Imprime um texto
   
   if (temperatura < 20){
-  digitalWrite(azul, LOW);
-  digitalWrite(verde, HIGH);
+  digitalWrite(azul, HIGH);
+  digitalWrite(verde, LOW);
   digitalWrite(vermelho, LOW);
   tone(buzzer, 1500);
   lcd.print(temperatura); // Imprime um texto
-
   }
   
   else if (temperatura > 20 && temperatura <= 50){
@@ -45,7 +44,6 @@ void loop(){
   digitalWrite(vermelho, LOW);
   noTone(buzzer);
   lcd.print(temperatura); // Imprime um texto
-
   }
     
   else{
